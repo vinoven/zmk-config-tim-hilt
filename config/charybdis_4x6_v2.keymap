@@ -66,7 +66,7 @@
       bindings = <
       &kp      ESC &kp       N1 &kp       N2 &kp       N3 &kp       N4 &kp       N5                   &kp       N6 &kp       N7 &kp       N8 &kp       N9 &kp       N0 &kp      DEL
       &kp      TAB &kp        Q &kp        W &kp        F &kp        P &kp        B                   &kp        J &kp        L &kp        U &kp        Y &kp    UNDER &kp     BSPC
-      &kp    LCTRL &kp        A &kp        R &kp        S &kp        T &kp        G                   &kp        M &kp        N &kp        E &kp        I &kp        O &kp    RCTRL
+      &kp    LCTRL &kp        A &kp        R &kp        S &kp        T &kp        G                   &kp        M &kp        N &kp        E &kp        I &kp        O &kp    ENTER
       &kp   LSHIFT &kp        Z &kp        X &kp        C &kp        D &kp        V                   &kp        K &kp        H &kp    COMMA &kp   PERIOD &kp     APOS &kp    RSHFT
                                              &mo      NAV &kp    SPACE &mo  NUMBERS                   &mo  NUMBERS &mo  SYMBOLS
                                                           &td0         &key_repeat                    &td0
@@ -77,13 +77,13 @@
       bindings = <
       &kp      ESC &kp       N1 &kp       N2 &kp       N3 &kp       N4 &kp       N5                   &kp       N6 &kp       N7 &kp       N8 &kp       N9 &kp       N0 &kp      DEL
       &kp        T &kp      TAB &kp        Q &kp        W &kp        E &kp        R                   &kp        Y &kp        U &kp        I &kp        O &kp        P &kp     BSPC
-      &kp        G &kp   LSHIFT &kp        A &kp        S &kp        D &kp        F                   &kp        H &kp        J &kp        K &kp        L &kp     SEMI &kp     APOS
+      &kp        G &kp   LSHIFT &kp        A &kp        S &kp        D &kp        F                   &kp        H &kp        J &kp        K &kp        L &kp     SEMI &kp    ENTER
       &kp        B &kp    LCTRL &kp        Z &kp        X &kp        C &kp        V                   &kp        M &kp        N &kp    COMMA &kp   PERIOD &kp    SLASH &kp    RSHFT
                                              &mo      NAV &kp    SPACE &mo  NUMBERS                   &mo  NUMBERS &mo  SYMBOLS
                                                           &td0         &key_repeat                    &td0
       >;
     };
-
+  
     nav_layer {
       bindings = <
       &trans       &trans       &trans       &trans       &trans       &trans                         &trans       &trans       &trans       &trans       &trans       &trans
