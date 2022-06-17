@@ -40,14 +40,15 @@
       compatible = "zmk,battery-nrf-vddh";
       label = "VBATT";
   };
-
-  conditional_layers {
-      compatible = "zmk,conditional-layers";
-      tri_layer {
-          if-layers = <1 2>;
-          then-layer = <3>;
-      };
-  };
+/*
+ *  conditional_layers {
+ *      compatible = "zmk,conditional-layers";
+ *      tri_layer {
+ *          if-layers = <1 2>;
+ *          then-layer = <3>;
+ *      };
+ *  };
+/*
 
   behaviors {
       td0: tap_dance_smart_shift {
