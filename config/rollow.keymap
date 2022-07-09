@@ -109,9 +109,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &none      W &kp        L &kp        Y &kp        P &kp        B &kp        R                 &kp        Y &kp        U &kp        I &kp        O &kp        P &none
-      &none      G &kp   LSHIFT &kp        A &kp        S &kp        D &kp        F                 &kp        H &kp        J &kp        K &kp        L &kp     SEMI &none
-      &none      B &kp    LCTRL &kp        Z &kp        X &kp        C &kp        V                 &kp        M &kp        N &kp    COMMA &kp   PERIOD &kp    SLASH &none
+      &trans       &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS &trans
+      &trans       &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A &trans
+      &trans       &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER &trans
                                              &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
                         >;
 
