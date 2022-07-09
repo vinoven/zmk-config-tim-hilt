@@ -89,8 +89,8 @@
       bindings = <
       &trans       &trans       &trans       &trans       &trans       &trans                       &trans       &trans       &trans       &trans       &trans       &trans
       &trans       &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL &trans
-      &trans       &sk     LALT &sk   LSHIFT &sk    LCTRL &sk     LGUI &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER &trans
-      &trans       &kp    LG(C) &kp    S_PRV &kp LAUNCHER &kp    S_NXT &kp    LG(V)                 &none        &none        &none        &none        &none        &trans
+      &trans       &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER &trans
+      &trans       &kp    S_PRV &kp    LC(C) &kp    LC(X) &kp    LC(V) &kp    S_NXT                 &none        &none        &none        &none        &none        &trans
                                              &trans       &trans       &trans                       &trans       &trans
                                                           &trans       &trans                       &trans
       >;
@@ -100,7 +100,7 @@
       bindings = <
       &trans       &trans       &trans       &trans       &trans       &trans                       &trans       &trans       &trans       &trans       &trans       &trans
       &trans       &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL &trans
-      &trans       &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp    UNDER &sk     LGUI &sk    LCTRL &sk   LSHIFT &sk     LALT &trans
+      &trans       &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp    UNDER &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
       &trans       &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE &trans
                                              &trans       &trans       &trans                       &trans       &trans
                                                           &trans       &trans                       &trans
@@ -111,7 +111,7 @@
       bindings = <
       &kp       F1 &kp       F2 &kp       F3 &kp       F4 &kp       F5 &kp       F6                 &kp       F7 &kp       F8 &kp       F9 &kp      F10 &kp      F11 &kp      F12
       &trans       &none        &kp       N7 &kp       N8 &kp       N9 &none                        &none        &none        &none        &none        &none        &trans
-      &trans       &none        &kp       N4 &kp       N5 &kp       N6 &none                        &none        &kp     LGUI &kp    LCTRL &kp   LSHIFT &kp     LALT &trans
+      &trans       &none        &kp       N4 &kp       N5 &kp       N6 &none                        &none        &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
       &trans       &none        &kp       N1 &kp       N2 &kp       N3 &none                        &none        &kp     LBKT &kp       N0 &kp     RBKT &none        &trans
                                              &trans       &trans       &trans                       &trans       &kp       N0
                                                           &trans       &trans                       &trans
