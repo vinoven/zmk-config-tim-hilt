@@ -13,8 +13,7 @@
 #define NAV 2
 #define SYMBOLS 3
 #define NUMBERS 4
-#define NUMPAD 5
-#define SPECIAL 6
+#define SPECIAL 5
 
 #define LAUNCHER (LG(TAB))
 #define CTRL_TAB (LC(TAB))
