@@ -90,7 +90,7 @@
       &trans       &trans       &trans       &trans       &trans       &trans                       &trans       &trans       &trans       &trans       &trans       &trans
       &trans       &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL &trans
       &trans       &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER &trans
-      &trans       &kp    S_PRV &kp    LC(C) &kp    LC(X) &kp    LC(V) &kp    S_NXT                 &none        &none        &none        &none        &none        &trans
+      &trans       &kp    S_PRV &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    S_NXT                 &none        &none        &none        &none        &none        &trans
                                              &trans       &trans       &trans                       &trans       &trans
                                                           &trans       &trans                       &trans
       >;
@@ -100,7 +100,7 @@
       bindings = <
       &trans       &trans       &trans       &trans       &trans       &trans                       &trans       &trans       &trans       &trans       &trans       &trans
       &trans       &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL &trans
-      &trans       &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp    UNDER &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
+      &trans       &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp      DQT &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
       &trans       &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE &trans
                                              &trans       &trans       &trans                       &trans       &trans
                                                           &trans       &trans                       &trans
