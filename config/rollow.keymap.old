@@ -28,10 +28,6 @@
 #define SPC_NEXT (LC(LG(RIGHT)))
 #define S_NXT SPC_NEXT
 
-&caps_word {
-    continue-list = <UNDERSCORE MINUS>;
-};
-
 &sk {
   release-after-ms = <2000>;
   quick-release;
@@ -66,16 +62,6 @@
           tapping-term-ms = <175>;
           bindings = <&sk LSHIFT>, <&caps_word>;
       };
-      gqt: global-quick-tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "GLOBAL_QUICK_TAP";
-          #binding-cells = <2>;
-          flavor = "tap-preferred";
-          tapping-term-ms = <175>;
-          quick-tap-ms = <125>;
-          global-quick-tap;
-          bindings = <&kp>, <&kp>;
-      };
   };
 
   combos {
@@ -84,11 +70,6 @@
             timeout-ms = <40>;
             key-positions = <0 1>;
             bindings = <&kp ESC>;
-        };
-        combo_sft {
-            timeout-ms = <40>;
-            key-positions = <32 33>;
-            bindings = <&sk LSHIFT>;
         };
     };
 
@@ -112,10 +93,10 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER
-      &kp        A &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        O
-      &kp        Z &kp        X &kp        C &kp        D &kp        V                 &kp        K &kp        H &kp    COMMA &kp   PERIOD &kp     APOS
-                                &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
+      &none        &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER &none
+      &none        &kp        A &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        O &none
+      &none        &kp        Z &kp        X &kp        C &kp        D &kp        V                 &kp        K &kp        H &kp    COMMA &kp   PERIOD &kp     APOS &none
+                                             &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
 
                         >;
 
@@ -139,10 +120,10 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS
-      &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A
-      &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER
-                                &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
+      &trans       &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS &trans
+      &trans       &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A &trans
+      &trans       &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER &trans
+                                             &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -165,62 +146,10 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER
-      &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        A &kp        I &kp        O
-      &kp     APOS &kp        X &kp        V &kp        D &kp        K                 &kp        Z &kp        H &kp    COMMA &kp   PERIOD &kp    SLASH
-                                &none        &mo      NAV &kp    SPACE                 &td0         &gqt SYMBOLS E &none
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
-                };
-
-                APTv3_layer {
-/* APTv3
- * .-----------------------------------------.                    .-----------------------------------------.
- * | TAB  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | BKSP |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |   ;  |   '  |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | SHFT |   Z  |   X  |   C  |   V  |   B  |-------.    .-------|   N  |   M  |   ,  |   .  |   /  | SHFT |
- * '-----------------------------------------/       /     \      \-----------------------------------------'
- *                          |  GUI |  LWR | / Space /       \ Space\  |TT(RS)| Tab  |
- *                          |      |      |/       /         \      \ |      |      |
- *                          '-------------''------'           '------''-------------'
- *
- *   Encoder Left: Up <-> Down
- *   Encoder Right: Left <-> Right
- */
-                        bindings = <
-      &kp        W &kp        G &kp        D &kp        F &kp        V                 &kp        Q &kp        L &kp        U &kp        O &kp        Y
-      &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I
-      &kp        X &kp        C &kp        M &kp        P &kp        K                 &kp        Z &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER
-                                &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
-                        >;
-
-                        sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
-                };
-
-                APTv4_layer {
-/* APTv4
- * .-----------------------------------------.                    .-----------------------------------------.
- * | TAB  |   Q  |   W  |   E  |   R  |   T  |                    |   Y  |   U  |   I  |   O  |   P  | BKSP |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | CTRL |   A  |   S  |   D  |   F  |   G  |                    |   H  |   J  |   K  |   L  |   ;  |   '  |
- * |------+------+------+------+------+------|                    |------+------+------+------+------+------|
- * | SHFT |   Z  |   X  |   C  |   V  |   B  |-------.    .-------|   N  |   M  |   ,  |   .  |   /  | SHFT |
- * '-----------------------------------------/       /     \      \-----------------------------------------'
- *                          |  GUI |  LWR | / Space /       \ Space\  |TT(RS)| Tab  |
- *                          |      |      |/       /         \      \ |      |      |
- *                          '-------------''------'           '------''-------------'
- *
- *   Encoder Left: Up <-> Down
- *   Encoder Right: Left <-> Right
- */
-                        bindings = <
-      &kp        W &kp        C &kp        G &kp        D &kp        K                 &kp        Q &kp        L &kp        U &kp        O &kp        Y
-      &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I
-      &kp        Z &kp        V &kp        M &kp        F &kp        P                 &kp        X &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER
-                                &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
+      &trans       &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS &trans
+      &trans       &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A &trans
+      &trans       &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER &trans
+                                             &none        &mo      NAV &kp    SPACE                 &td0         &lt  SYMBOLS E
                         >;
 
                         sensor-bindings = <&inc_dec_kp DOWN UP &inc_dec_kp RIGHT LEFT>;
@@ -243,10 +172,10 @@
  *   Encoder Right: -
  */
                         bindings = <
-      &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL
-      &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER
-      &kp    S_PRV &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    S_NXT                 &kp CAPS     &kp KP_NLCK  &kp SLCK     &none        &none
-                                &trans       &trans       &trans                       &trans       &trans       &trans
+      &trans       &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL &trans
+      &trans       &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER &trans
+      &trans       &kp    S_PRV &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    S_NXT                 &none        &none        &none        &none        &none        &trans
+                                             &trans       &trans       &trans                       &trans       &trans       &trans
                             >;
 
                             sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
@@ -269,10 +198,10 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL
-      &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp      DQT &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI
-      &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE
-                                &trans       &trans       &trans                       &trans       &trans       &trans
+      &trans       &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL &trans
+      &trans       &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp      DQT &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
+      &trans       &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE &trans
+                                             &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
    
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -295,12 +224,12 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &none        &kp       N7 &kp       N8 &kp       N9 &none                        &kp       F1 &kp       F2 &kp       F3 &kp       F4 &kp       F5
-      &none        &kp       N4 &kp       N5 &kp       N6 &none                        &kp     BSPC &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI
-      &none        &kp       N1 &kp       N2 &kp       N3 &none                        &kp      F12 &kp     LBKT &kp       N0 &kp     RBKT &none
-                                &trans       &trans       &trans                       &trans       &trans       &trans
+      &trans       &none        &kp       N7 &kp       N8 &kp       N9 &none                        &kp       F1 &kp       F2 &kp       F3 &kp       F4 &kp       F5 &trans
+      &trans       &none        &kp       N4 &kp       N5 &kp       N6 &none                        &none        &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &trans
+      &trans       &none        &kp       N1 &kp       N2 &kp       N3 &none                        &none        &kp     LBKT &kp       N0 &kp     RBKT &none        &trans
+                                             &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
-
+   
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
                 };
 
@@ -321,10 +250,10 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &trans       &to BASE     &to CANARY   &to ENGEL    &to APTv3                    &to APTv3    &to ENGEL    &to CANARY   &to BASE     &trans
-      &to APTv4    &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &to APTv4
-      &none        &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &bootloader                  &bootloader  &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &none
-                                &trans       &trans       &trans                       &trans       &trans       &trans
+      &trans       &trans       &to BASE     &to CANARY   &to ENGEL    &to APTv3                    &to APTv3    &to ENGEL    &to CANARY   &to BASE     &trans       &trans
+      &trans       &to APTv3    &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &to APTv4    &trans
+      &trans       &none        &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &bootloader                  &bootloader  &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &none        &trans
+                                             &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
    
                         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
