@@ -42,7 +42,7 @@
 
   chosen {
     zmk,battery = &vbatt;
-    zmk,matrix_transform = &five_column_transform;
+    //zmk,matrix_transform = &five_column_transform;
   };
 
   vbatt: vbatt {
@@ -113,9 +113,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER
-      &kp        A &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        O
-      &kp        Z &kp        X &kp        C &kp        D &kp        V                 &kp        K &kp        H &kp    COMMA &kp   PERIOD &kp     APOS
+      &none &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER &none
+      &none &kp        A &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        O &none
+      &none &kp        Z &kp        X &kp        C &kp        D &kp        V                 &kp        K &kp        H &kp    COMMA &kp   PERIOD &kp     APOS &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
 
                         >;
@@ -140,9 +140,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS
-      &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A
-      &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER
+      &none &kp        W &kp        L &kp        Y &kp        P &kp        B                 &kp        Z &kp        F &kp        O &kp        U &kp     APOS &none
+      &none &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        E &kp        I &kp        A &none
+      &none &kp        Q &kp        J &kp        V &kp        D &kp        K                 &kp        X &kp        H &kp    COMMA &kp   PERIOD &kp    UNDER &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
                         >;
 
@@ -166,9 +166,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER
-      &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        A &kp        I &kp        O
-      &kp     APOS &kp        X &kp        V &kp        D &kp        K                 &kp        Z &kp        H &kp    COMMA &kp   PERIOD &kp    SLASH
+      &none &kp        Q &kp        W &kp        F &kp        P &kp        B                 &kp        J &kp        L &kp        U &kp        Y &kp    UNDER &none
+      &none &kp        C &kp        R &kp        S &kp        T &kp        G                 &kp        M &kp        N &kp        A &kp        I &kp        O &none
+      &none &kp     APOS &kp        X &kp        V &kp        D &kp        K                 &kp        Z &kp        H &kp    COMMA &kp   PERIOD &kp    SLASH &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &gqt SYMBOLS E &none
                         >;
 
@@ -192,9 +192,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        W &kp        G &kp        D &kp        F &kp        V                 &kp        Q &kp        L &kp        U &kp        O &kp        Y
-      &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I
-      &kp        X &kp        C &kp        M &kp        P &kp        K                 &kp        Z &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER
+      &none &kp        W &kp        G &kp        D &kp        F &kp        V                 &kp        Q &kp        L &kp        U &kp        O &kp        Y &none
+      &none &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I &none
+      &none &kp        X &kp        C &kp        M &kp        P &kp        K                 &kp        Z &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
                         >;
 
@@ -218,9 +218,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp        W &kp        C &kp        G &kp        D &kp        K                 &kp        Q &kp        L &kp        U &kp        O &kp        Y
-      &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I
-      &kp        Z &kp        V &kp        M &kp        F &kp        P                 &kp        X &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER
+      &none &kp        W &kp        C &kp        G &kp        D &kp        K                 &kp        Q &kp        L &kp        U &kp        O &kp        Y &none
+      &none &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        J &kp        N &kp        E &kp        A &kp        I &none
+      &none &kp        Z &kp        V &kp        M &kp        F &kp        P                 &kp        X &kp   PERIOD &kp    COMMA &kp     APOS &kp    UNDER &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &mo  SYMBOLS &none
                         >;
 
@@ -244,9 +244,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &kp    SLASH &kp        W &kp        G &kp        D &kp        B                 &kp        J &kp        F &kp        O &kp        U &kp    UNDER
-      &kp        R &kp        S &kp        T &kp        H &kp        K                 &kp        P &kp        N &kp        A &kp        I &kp        L
-      &kp        X &kp        C &kp        M &kp        V &kp        Q                 &kp        Z &kp        Y &kp    COMMA &kp      DOT &kp     APOS
+      &none &kp    SLASH &kp        W &kp        G &kp        D &kp        B                 &kp        J &kp        F &kp        O &kp        U &kp    UNDER &none
+      &none &kp        R &kp        S &kp        T &kp        H &kp        K                 &kp        P &kp        N &kp        A &kp        I &kp        L &none
+      &none &kp        X &kp        C &kp        M &kp        V &kp        Q                 &kp        Z &kp        Y &kp    COMMA &kp      DOT &kp     APOS &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &gqt SYMBOLS E &none
                         >;
 
@@ -270,9 +270,9 @@
  *   Encoder Right: -
  */
                         bindings = <
-      &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL
-      &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER
-      &kp    S_PRV &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    S_NXT                 &kp CAPS     &kp KP_NLCK  &kp SLCK     &none        &none
+      &none &sl  SPECIAL &kp  C_S_TAB &kp      TAB &kp CTRL_TAB &none                        &none        &kp     HOME &kp       UP &kp      END &kp      DEL &none
+      &none &sk     LGUI &sk     LALT &sk    LCTRL &sk   LSHIFT &none                        &kp     BSPC &kp     LEFT &kp     DOWN &kp    RIGHT &kp    ENTER &none
+      &none &kp    S_PRV &kp    LC(X) &kp    LC(C) &kp    LC(V) &kp    S_NXT                 &kp CAPS     &kp KP_NLCK  &kp SLCK     &none        &none        &none
                                 &trans       &trans       &trans                       &trans       &trans       &trans
                             >;
 
@@ -296,9 +296,9 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL
-      &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp      DQT &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI
-      &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE
+      &none &kp      ESC &kp    PRCNT &kp    QMARK &kp    COLON &kp       AT                 &kp    CARET &kp     LPAR &kp     SEMI &kp     RPAR &sl  SPECIAL &none
+      &none &kp     EXCL &kp     PLUS &kp    MINUS &kp    EQUAL &kp     HASH                 &kp      DQT &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &none
+      &none &kp    TILDE &kp   DOLLAR &kp    ASTRK &kp    SLASH &kp     AMPS                 &kp     PIPE &kp     LBRC &kp     BSLH &kp     RBRC &kp    GRAVE &none
                                 &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
    
@@ -322,9 +322,9 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &none        &kp       N7 &kp       N8 &kp       N9 &none                        &kp       F1 &kp       F2 &kp       F3 &kp       F4 &kp       F5
-      &none        &kp       N4 &kp       N5 &kp       N6 &none                        &kp     BSPC &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI
-      &none        &kp       N1 &kp       N2 &kp       N3 &none                        &kp      F12 &kp     LBKT &kp       N0 &kp     RBKT &none
+      &none &none        &kp       N7 &kp       N8 &kp       N9 &none                        &kp       F1 &kp       F2 &kp       F3 &kp       F4 &kp       F5 &none
+      &none &none        &kp       N4 &kp       N5 &kp       N6 &none                        &kp     BSPC &sk   LSHIFT &sk    LCTRL &sk     LALT &sk     LGUI &none
+      &none &none        &kp       N1 &kp       N2 &kp       N3 &none                        &kp      F12 &kp     LBKT &kp       N0 &kp     RBKT &none        &none
                                 &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
 
@@ -348,9 +348,9 @@
  *   Encoder Right: VOL_UP <-> VOL_D
  */
                         bindings = <
-      &trans       &to BASE     &to CANARY   &to ENGEL    &to APTex                    &to APTex    &to ENGEL    &to CANARY   &to BASE     &trans
-      &to APTv4    &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &to APTv4
-      &to APTv3    &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &bootloader                  &bootloader  &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &to APTv3
+      &none &trans       &to BASE     &to CANARY   &to ENGEL    &to APTex                    &to APTex    &to ENGEL    &to CANARY   &to BASE     &trans    &none
+      &none &to APTv4    &bt BT_SEL 3 &bt BT_SEL 2 &bt BT_SEL 1 &bt BT_SEL 0                 &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &to APTv4 &none
+      &none &to APTv3    &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &bootloader                  &bootloader  &bt   BT_PRV &bt   BT_CLR &bt   BT_NXT &to APTv3 &none
                                 &trans       &trans       &trans                       &trans       &trans       &trans
                         >;
    
