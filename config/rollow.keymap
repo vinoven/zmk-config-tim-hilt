@@ -244,9 +244,9 @@
  *   Encoder Right: Left <-> Right
  */
                         bindings = <
-      &none &kp    SLASH &kp        W &kp        G &kp        D &kp        B                 &kp        J &kp        F &kp        O &kp        U &kp    UNDER &none
-      &none &kp        R &kp        S &kp        T &kp        H &kp        K                 &kp        P &kp        N &kp        A &kp        I &kp        L &none
-      &none &kp        X &kp        C &kp        M &kp        V &kp        Q                 &kp        Z &kp        Y &kp    COMMA &kp      DOT &kp     APOS &none
+      &none &kp    SLASH &kp        W &kp        M &kp        V &kp        Q                 &kp        Z &kp        Y &kp        O &kp        U &kp    UNDER &none
+      &none &kp        R &kp        S &kp        T &kp        H &kp        B                 &kp        P &kp        N &kp        A &kp        I &kp        L &none
+      &none &kp        X &kp        C &kp        G &kp        D &kp        K                 &kp        J &kp        F &kp    COMMA &kp      DOT &kp     APOS &none
                                 &none        &mo      NAV &kp    SPACE                 &td0         &gqt SYMBOLS E &mo      NAV
                         >;
 
