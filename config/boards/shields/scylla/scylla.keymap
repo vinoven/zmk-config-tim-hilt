@@ -9,26 +9,47 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
+#define DEF 1
+#define SYM 2
+#define NAV 3
+
 / {
 	keymap {
 		compatible = "zmk,keymap";
 
-		default_layer {
-// ---------------------------------------------------------------------------------------------------------------------
-// |BT_CLR |   1   |   2   |   3   |   4   |   5   |                   |   6   |   7   |   8   |   9   |   0   |       |
-// | TAB   |   Q   |   W   |   F   |   P   |   B   |                   |   J   |   L   |   U   |   Y   |   ;   |       |
-// | CTRL  |   A   |   R   |   S   |   T   |   G   |                   |   M   |   N   |   E   |   I   |   O   |       |
-// | SHIFT |   Z   |   X   |   C   |   D   |   V   |                   |   K   |   H   |   ,   |   .   |   /   |       |
-//                         | SPACE |       |       |         	  	     | ENTER |       |  BSPC |
-//						                     |       |	     | 	  	             |       |       |
+		DEF {
+			bindings = <
+// TODO: BT_CLR should be replaced with backtick/hash in the future
+&bt BT_CLR	&kp N1    &kp N2    &kp N3    &kp N4    &kp N5             &kp N6    &kp N7   &kp N8    &kp N9  &kp N0		&kp DEL
+&kp TAB     &kp Q     &kp W     &kp F     &kp P     &kp B              &kp J     &kp L    &kp U     &kp Y   &kp SEMI 	&kp SQT
+&kp LCTRL   &kp A     &kp R     &kp S     &kp T     &kp G              &kp M     &kp N    &kp E     &kp I   &kp O 	  &kp MINUS
+&kp LSHIFT  &kp Z     &kp X     &kp C     &kp D     &kp V              &kp K     &kp H    &kp COMMA &kp DOT &kp SLASH &none
+//                   		          &kp SPACE &mo SYM   &kp LALT           &kp ENTER &mo SYM  &mt LSHFT BSPC
+//                   	                      &kp RALT  &kp LGUI			     &kp PSCRN &kp RALT
+                   		          &kp A &kp B   &kp C           &kp F &kp G  &kp H
+                   	                      &kp D  &kp E			     &kp I &kp J
+			>;
+		};
+    SYM {
+			bindings = <
+&kp GRAVE &kp EXCL  &kp F2   &kp F3    &kp F4    &kp F5              &kp F6    &kp F7   &kp F8    &kp F9  &kp F10		&kp F12
+&trans    &kp AT    &kp W    &kp F     &kp P     &kp CARET           &kp J     &kp L    &kp U     &kp Y   &kp COLON &trans
+&trans    &kp EQUAL &kp DLLR &kp LPAR  &kp RPAR  &kp TILDE           &kp M     &kp N    &kp E     &kp I   &kp PLUS  &kp STAR
+&trans    &kp Z     &kp X    &kp C     &kp D     &kp V               &kp K     &kp H    &kp COMMA &kp DOT &kp SLASH &trans
+                             &kp SPACE &mo SYM   &kp LALT            &kp ENTER &mo SYM  &mt LSHFT BSPC
+                   	         &none     &none					               &none     &none
+			>;
+    };
+
+    NAV {
 			bindings = <
 &bt BT_CLR	&kp N1    &kp N2   &kp N3    &kp N4    &kp N5              &kp N6    &kp N7   &kp N8    &kp N9  &kp N0		&none
 &kp TAB     &kp Q     &kp W    &kp F     &kp P     &kp B               &kp J     &kp L    &kp U     &kp Y   &kp SEMI 	&none
 &kp LCTRL   &kp A     &kp R    &kp S     &kp T     &kp G               &kp M     &kp N    &kp E     &kp I   &kp O 	  &none
 &kp LSHIFT  &kp Z     &kp X    &kp C     &kp D     &kp V               &kp K     &kp H    &kp COMMA &kp DOT &kp SLASH &none
-                   		&kp SPACE &none     &none                        &kp ENTER &none    &kp BSPC
+                   		&kp SPACE &mo SYM   &kp LALT                     &kp ENTER &mo SYM  &mt LSHFT BSPC
                    	            &none     &none					               &none     &none
 			>;
-		};
+    }
 	};
 };
