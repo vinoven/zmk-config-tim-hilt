@@ -50,6 +50,6 @@
                    		&kp SPACE &mo SYM   &kp LALT                     &kp ENTER &mo SYM  &mt LSHFT BSPC
                    	            &none     &none					               &none     &none
 			>;
-    }
+    };
 	};
 };
