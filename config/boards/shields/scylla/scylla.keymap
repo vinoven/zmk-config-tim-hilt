@@ -28,7 +28,7 @@ bindings = <
 &kp LGUI   &kp A  &kp R  &kp S   &kp T     &kp G          &kp M         &kp N          &kp E     &kp I   &kp O     &kp SQT
 &kp LSHIFT &kp Z  &kp X  &kp C   &kp D     &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH &kp END
                          &mo SYM &kp SPACE &kp LALT       &lt NAV ENTER &mt LSHFT BSPC &mo SYM
-                                 &kp LCTRL &kp LALT       &kp LALT      <&screenshot>
+                                 &kp LCTRL &kp LALT       &kp LALT      &screenshot
 >;
 };
 SYM {
