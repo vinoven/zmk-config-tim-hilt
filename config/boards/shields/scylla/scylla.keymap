@@ -11,7 +11,7 @@
 	    ZMK_MACRO(screenshot,
 		wait-ms = <30>;
 		tap-ms = <40>;
-		bindings = <&macro_press &kp LGUI &kp LSHIFT>, <&macro_tap &kp N5>, <&macro_release &kp LSHIFT &kp LGUI>;
+		bindings = <&macro_press &kp LGUI &kp LSHIFT>, <&macro_tap &kp N4>, <&macro_release &kp LSHIFT &kp LGUI>;
 	    )
     };
 };
