@@ -8,29 +8,29 @@
 
 / {
      macros {
-      sqt_tap: sqt_tap {
-        label = "ZM_sqt_tap";
+      sqt_spc: sqt_spc {
+        label = "ZM_sqt_spc";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         tap-ms = <30>;
         bindings = <&kp SQT &kp SPACE>;
       };
-      grv_tap: grv_tap {
-        label = "ZM_grv_tap";
+      grave_spc: grave_spc {
+        label = "ZM_grave_spc";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         tap-ms = <30>;
-        bindings = <&kp GRV &kp SPACE>;
+        bindings = <&kp GRAVE &kp SPACE>;
       };
-      tilde_tap: tilde_tap {
-        label = "ZM_tilde_tap";
+      tilde_spc: tilde_spc {
+        label = "ZM_tilde_spc";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         tap-ms = <30>;
         bindings = <&kp TILDE &kp SPACE>;
       };
-      caret_tap: caret_tap {
-        label = "ZM_tilde_tap";
+      caret_spc: caret_spc {
+        label = "ZM_tilde_spc";
         compatible = "zmk,behavior-macro";
         #binding-cells = <0>;
         tap-ms = <30>;
@@ -47,7 +47,7 @@ DEF {
 bindings = <
 &kp HASH       &kp N1 &kp N2 &kp N3   &kp N4    &kp N5         &kp N6        &kp N7         &kp N8    &kp N9  &kp N0    &kp DEL
 &kp TAB        &kp Q  &kp W  &kp F    &kp P     &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI  &kp MINUS
-&mt LCTL ESC   &kp A  &kp R  &kp S    &kp T     &kp G          &kp M         &kp N          &kp E     &kp I   &kp O     &sqt_tap
+&mt LCTL ESC   &kp A  &kp R  &kp S    &kp T     &kp G          &kp M         &kp N          &kp E     &kp I   &kp O     &sqt_spc
 &kp LSHIFT     &kp Z  &kp X  &kp C    &kp D     &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH &kp END
                              &kp LGUI &kp SPACE &kp LALT       &lt SYM ENTER &mt LSHFT BSPC &mo INT
                                       &kp LCTRL &kp LALT       &kp LALT      &kp LG(LS(S))
@@ -56,8 +56,8 @@ bindings = <
 SYM {
 bindings = <
 &trans    &trans    &kp F2    &kp F3   &kp F4   &kp F5       &kp F6   &kp F7    &kp F8    &kp F9 &kp F11   &kp F12 
-&grv_tap  &kp EXCL  &kp AMPS  &kp LBRC &kp RBRC &caret_tap   &none    &kp N7    &kp N8    &kp N9 &kp COLON &trans
-&kp HASH  &kp EQUAL &kp DLLR  &kp LPAR &kp RPAR &tilde_tap   &kp N0   &kp N4    &kp N5    &kp N6 &kp PLUS  &kp STAR
+&grv_spc  &kp EXCL  &kp AMPS  &kp LBRC &kp RBRC &caret_spc   &none    &kp N7    &kp N8    &kp N9 &kp COLON &trans
+&kp HASH  &kp EQUAL &kp DLLR  &kp LPAR &kp RPAR &tilde_spc   &kp N0   &kp N4    &kp N5    &kp N6 &kp PLUS  &kp STAR
 &trans    &kp AT    &kp PRCNT &kp LBKT &kp RBKT &kp PIPE     &kp N0   &kp N1    &kp N2    &kp N3 &kp BSLH  &kp HOME
                               &kp LEFT &kp UP   &kp RIGHT    &kp LEFT &kp UP    &kp RIGHT
                                        &kp DOWN  &kp ESC     &kp ESC  &kp DOWN
