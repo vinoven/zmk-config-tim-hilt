@@ -4,14 +4,29 @@
 
 #define DEF 0
 #define SYM 1
-#define NAV 2
+#define INT 2
 
 / {
     macros {
-	    ZMK_MACRO(screenshot,
+            ZMK_MACRO(SQT_TAP,
 		wait-ms = <30>;
 		tap-ms = <40>;
-		bindings = <&macro_press &kp LGUI &kp LSHIFT>, <&macro_tap &kp N4>, <&macro_release &kp LSHIFT &kp LGUI>;
+		bindings = <&macro_tap &kp SQT>, <&macro_tap &kp SPACE>;
+	    )
+            ZMK_MACRO(GRV_TAP,
+		wait-ms = <30>;
+		tap-ms = <40>;
+		bindings = <&macro_tap &kp GRV>, <&macro_tap &kp SPACE>;
+	    )
+            ZMK_MACRO(TILDE_TAP,
+		wait-ms = <30>;
+		tap-ms = <40>;
+		bindings = <&macro_tap &kp TILDE>, <&macro_tap &kp SPACE>;
+	    )
+            ZMK_MACRO(CARET_TAP,
+		wait-ms = <30>;
+		tap-ms = <40>;
+		bindings = <&macro_tap &kp CARET>, <&macro_tap &kp SPACE>;
 	    )
     };
 };
@@ -20,36 +35,34 @@
   keymap {
     compatible = "zmk,keymap";
 
-// TODO: Add Switch to NAV-layer on this half
 DEF {
 bindings = <
-&kp HASH       &kp N1 &kp N2 &kp N3  &kp N4    &kp N5         &kp N6        &kp N7         &kp N8    &kp N9  &kp N0    &kp DEL
-&kp TAB        &kp Q  &kp W  &kp F   &kp P     &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI  &kp MINUS
-&mt LGUI ESC   &kp A  &kp R  &kp S   &kp T     &kp G          &kp M         &kp N          &kp E     &kp I   &kp O     &kp SQT
-&kp LSHIFT     &kp Z  &kp X  &kp C   &kp D     &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH &kp END
-                             &mo SYM &kp SPACE &kp LALT       &lt NAV ENTER &mt LSHFT BSPC &mo SYM
-                                     &kp LCTRL &kp LALT       &kp LALT      &screenshot
+&kp HASH       &kp N1 &kp N2 &kp N3   &kp N4    &kp N5         &kp N6        &kp N7         &kp N8    &kp N9  &kp N0    &kp DEL
+&kp TAB        &kp Q  &kp W  &kp F    &kp P     &kp B          &kp J         &kp L          &kp U     &kp Y   &kp SEMI  &kp MINUS
+&mt LCTL ESC   &kp A  &kp R  &kp S    &kp T     &kp G          &kp M         &kp N          &kp E     &kp I   &kp O     &SQT_TAP
+&kp LSHIFT     &kp Z  &kp X  &kp C    &kp D     &kp V          &kp K         &kp H          &kp COMMA &kp DOT &kp SLASH &kp END
+                             &kp LGUI &kp SPACE &kp LALT       &lt SYM ENTER &mt LSHFT BSPC &mo INT
+                                      &kp LCTRL &kp LALT       &kp LALT      &kp LG(LS(S))
 >;
 };
 SYM {
 bindings = <
-&kp GRAVE &kp EXCL  &kp F2    &kp F3   &kp F4   &kp F5       &kp F6   &kp F7    &kp F8    &kp F9 &kp F11   &kp F12 
-&trans    &kp AT    &kp AMPS  &kp LBRC &kp RBRC &kp CARET    &none    &kp N7    &kp N8    &kp N9 &kp COLON &trans
-&trans    &kp EQUAL &kp DLLR  &kp LPAR &kp RPAR &kp TILDE    &kp N0   &kp N4    &kp N5    &kp N6 &kp PLUS  &kp STAR
-&trans    &trans    &kp PRCNT &kp LBKT &kp RBKT &kp PIPE     &kp N0   &kp N1    &kp N2    &kp N3 &kp BSLH  &kp HOME
-                              &trans   &trans   &trans       &kp LEFT &kp UP    &kp RIGHT
-                                       &trans   &kp ESC      &kp ESC  &kp DOWN
+&trans    &trans    &kp F2    &kp F3   &kp F4   &kp F5       &kp F6   &kp F7    &kp F8    &kp F9 &kp F11   &kp F12 
+&GRV_TAP  &kp EXCL  &kp AMPS  &kp LBRC &kp RBRC &CARET_TAP   &none    &kp N7    &kp N8    &kp N9 &kp COLON &trans
+&kp HASH  &kp EQUAL &kp DLLR  &kp LPAR &kp RPAR &TILDE_TAP   &kp N0   &kp N4    &kp N5    &kp N6 &kp PLUS  &kp STAR
+&trans    &kp AT    &kp PRCNT &kp LBKT &kp RBKT &kp PIPE     &kp N0   &kp N1    &kp N2    &kp N3 &kp BSLH  &kp HOME
+                              &kp LEFT &kp UP   &kp RIGHT    &kp LEFT &kp UP    &kp RIGHT
+                                       &kp DOWN  &kp ESC     &kp ESC  &kp DOWN
 >;
 };
-// TODO: Add nav-keys on this layer
-NAV {
+INT {
 bindings = <
-&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &kp F3   &kp F4   &bt BT_CLR       &kp F6      &kp F7  &kp F8  &kp F9 &kp F10   &kp F12 
-&trans       &kp AT       &kp AMPS     &kp LBRC &kp RBRC &bootloader      &bootloader &kp N7  &kp N8    &kp N9 &kp COLON &trans
-&trans       &kp EQUAL    &kp DLLR     &kp LPAR &kp RPAR &kp TILDE        &kp N0      &kp N4  &kp N5    &kp N6 &kp PLUS  &kp STAR
-&trans       &trans       &kp PRCNT    &kp LBKT &kp RBKT &kp PIPE         &kp N0      &kp N1  &kp N2    &kp N3 &kp BSLH  &trans
-                                       &trans   &trans   &trans           &kp LEFT    &kp UP  &kp RIGHT
-                                                &trans   &kp ESC          &kp ESC     &kp DOWN
+&bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &none        &none        &bt BT_CLR        &none      &none   &none        &none &none      &none 
+&none        &none        &none        &none        &none        &none             &none      &none   &kp RA(Y)    &none &none      &none
+&none        &kp RA(Q)    &none        &kp RA(S)    &none        &none             &none      &none   &kp RA(5)    &none &kp RA(P)  &none
+&none        &none        &none        &none        &none        &none             &none      &knone  &none        &none &none      &none
+                                       &kp LG(LEFT) &kp LG(UP)   &kp LG(RIGHT)     &none      &none   &none
+                                                    &kp LG(DOWN) &none             &none      &none
 >;
 };
 };
