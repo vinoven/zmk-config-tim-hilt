@@ -8,26 +8,26 @@
 
 / {
     macros {
-            ZMK_MACRO(SQT_TAP,
-		wait-ms = <30>;
-		tap-ms = <40>;
-		bindings = <&macro_tap &kp SQT>, <&macro_tap &kp SPACE>;
-	    )
-            ZMK_MACRO(GRV_TAP,
-		wait-ms = <30>;
-		tap-ms = <40>;
-		bindings = <&macro_tap &kp GRV>, <&macro_tap &kp SPACE>;
-	    )
-            ZMK_MACRO(TILDE_TAP,
-		wait-ms = <30>;
-		tap-ms = <40>;
-		bindings = <&macro_tap &kp TILDE>, <&macro_tap &kp SPACE>;
-	    )
-            ZMK_MACRO(CARET_TAP,
-		wait-ms = <30>;
-		tap-ms = <40>;
-		bindings = <&macro_tap &kp CARET>, <&macro_tap &kp SPACE>;
-	    )
+      ZMK_MACRO(SQT_TAP,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_tap &kp SQT>, <&macro_tap &kp SPACE>;
+      );
+      ZMK_MACRO(GRV_TAP,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_tap &kp GRV>, <&macro_tap &kp SPACE>;
+      );
+      ZMK_MACRO(TILDE_TAP,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_tap &kp TILDE>, <&macro_tap &kp SPACE>;
+      );
+      ZMK_MACRO(CARET_TAP,
+        wait-ms = <30>;
+        tap-ms = <40>;
+        bindings = <&macro_tap &kp CARET>, <&macro_tap &kp SPACE>;
+      );
     };
 };
 
